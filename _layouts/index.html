@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="dc.creator" content="Rémi Prévost - http://exomel.com">
     {% if page.direction == "rtl" %}
-    <title>{{ page.subtitle }} — Homebrew</title>
+    <title>{{ page.subtitle }} — myzsh</title>
     {% else %}
-    <title>Homebrew — {{ page.subtitle }}</title>
+    <title>myzsh — {{ page.subtitle }}</title>
     {% endif %}
     <link rel="stylesheet" href="./css/screen.css" type="text/css" media="screen">
     <link rel="stylesheet" href="./css/pygments.css" type="text/css" media="screen">
@@ -59,7 +59,7 @@
   <body>
     <div id="wrap">
       <div id="header">
-        <h1><a href="./">Homebrew</a></h1>
+        <h1><a href="./">myzsh</a></h1>
         <p id="subtitle"><strong>{{ page.subtitle }}</strong></p>
 
         <select onchange="loadLanguage(this.options[this.selectedIndex].value)">
@@ -144,19 +144,11 @@ $ brew edit wget # opens in $EDITOR!
                 <p>{{ page.pagecontent.formula }}</p>
               </div>
               <div class="col-2">
-{% highlight ruby %}
-require "formula"
-
-class Wget < Formula
-  homepage "http://www.gnu.org/software/wget/"
-  url "http://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz"
-  sha1 "f3c925f19dfe5ed386daae4f339175c108c50574"
-
-  def install
-    system "./configure", "--prefix=#{prefix}"
-    system "make", "install"
-  end
-end
+{% highlight bash %}
+date_func() {
+	echo "%D{\%D}"
+}
+OUTPUT=date_func
 {% endhighlight %}
               </div>
             </div>
@@ -172,7 +164,7 @@ end
           <li>
             <div class="group row">
               <h2 id="install">{{ page.pagecontent.install.install }}</h2>
-              <pre style='clear:both;text-align:center;margin:0 -3em;margin-bottom:0.9em'><code id='selectable' onclick="selectText(this)">ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</code></pre>
+              <pre style='clear:both;text-align:center;margin:0 -3em;margin-bottom:0.9em'><code id='selectable' onclick="selectText(this)">git clone https://github.com/myzsh/myzsh $HOME/.myzsh; ZDOTDIR=$HOME/.myzsh/demo zsh -i</code></pre>
               <div class="col-1">
                 <p>{{ page.pagecontent.install.paste }}</p>
               </div>
@@ -199,6 +191,6 @@ end
         </ul>
       </div>
     </div>
-    <a href="http://github.com/Homebrew/homebrew"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <a href="http://github.com/myzsh/myzsh"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
   </body>
 </html>
