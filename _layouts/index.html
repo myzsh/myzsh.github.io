@@ -62,7 +62,8 @@
         <h1><a href="./">myzsh</a></h1>
         <p id="subtitle"><strong>{{ page.subtitle }}</strong></p>
 
-        <select onchange="loadLanguage(this.options[this.selectedIndex].value)">
+		  <!-- Language Selection -->
+        <!-- <select onchange="loadLanguage(this.options[this.selectedIndex].value)">
           {% for lang in site.langs %}
             {% if page.lang == lang.langcode %}
             <option value="{{ lang.langcode | downcase }}" selected="selected">{{ lang.lang_string }}</option>
@@ -70,7 +71,7 @@
             <option value="{{ lang.langcode | downcase }}">{{ lang.lang_string }}</option>
             {% endif %}
           {% endfor %}
-        </select>
+			 </select> -->
       </div>
 
       <div id="informations">
