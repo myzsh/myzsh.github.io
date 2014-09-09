@@ -1,46 +1,12 @@
+# Site settings
+title: Myzsh
+email: about@myzsh.io
+description: "A framework for modifying a zsh prompt"
 langs:
   - langcode: en
-    lang_string: English
-  - langcode: de
-    lang_string: Deutsch
-  - langcode: es
-    lang_string: Español
-  - langcode: fr
-    lang_string: Français
-  - langcode: 'no'
-    lang_string: Norsk
-  - langcode: zh-CN
-    lang_string: 简体中文
-  - langcode: zh-TW
-    lang_string: 繁體中文
-  - langcode: ja
-    lang_string: 日本語
-  - langcode: ko
-    lang_string: 한국어
-  - langcode: pt-BR
-    lang_string: Português Brasileiro
-  - langcode: ru
-    lang_string: Русский
-  - langcode: th
-    lang_string: ไทย
-  - langcode: tr
-    lang_string: Türkçe
-  - langcode: it
-    lang_string: Italiano
-  - langcode: fa
-    lang_string: فارسی
-  - langcode: ar
-    lang_string: العربية
-  - langcode: vi
-    lang_string: Tiếng Việt
-  - langcode: he
-    lang_string: עברית
-  - langcode: az
-    lang_string: Azərbaycanca
-  - langcode: pl
-    lang_string: Polski
-  - langcode: ca
-    lang_string: Català
+    lang_string: Englisha
+
+# Build settings
 exclude: [bin, vendor, CNAME, Gemfile, Gemfile.lock, README.md, style.scss]
 markdown: rdiscount
 rdiscount:
