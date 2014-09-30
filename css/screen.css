@@ -19,7 +19,7 @@ body {
   font-size: 150%;
   line-height: 1.4;
   color: #f6e6cc;
-  background: #27221a url("../img/bg-body.gif");
+  background: #27221a url("../img/bg-body.jpg");
   position: relative;
   behavior: url("/js/ie6/csshover.htc");
   padding: 0 30px;
