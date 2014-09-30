@@ -96,14 +96,14 @@
               </div>
               <div class="col-2">
 {% highlight bash %}
-$ cd /usr/local
-$ find Cellar
-Cellar/wget/1.15
-Cellar/wget/1.15/bin/wget
-Cellar/wget/1.15/share/man/man1/wget.1
+% cd $HOME/.myzsh
+% ls
+CHANGELOG.md  completions/  demo/     init      LICENSE
+modules/      README.md     remotes/  samples/  themes/
 
-$ ls -l bin
-bin/wget -> ../Cellar/wget/1.15/bin/wget
+% cat $HOME/.zshrc
+MYZSH="$HOME/.myzsh"
+source "$MYZSH/init"
 {% endhighlight %}
               </div>
             </div>
@@ -122,8 +122,11 @@ bin/wget -> ../Cellar/wget/1.15/bin/wget
               </div>
               <div class="col-2">
 {% highlight bash %}
-$ brew create http://foo.com/bar-1.0.tgz
-Created /usr/local/Library/Formula/bar.rb
+% myzsh edit mymodule # opens in $EDITOR
+Error: Cannot find module mymodule
+Create it? (y/n):
+% myzsh enable extra mymodule
+% myzsh save
 {% endhighlight %}
               </div>
             </div>
@@ -180,7 +183,7 @@ OUTPUT=date_func
             <div class="group row">
               <h2 id="further-doc">{{ page.pagecontent.doc.further }}</h2>
               <div class="button">
-                <p><a href="https://github.com/Homebrew/homebrew/wiki">{{ page.pagecontent.doc.wiki }}</a></p>
+                <p><a href="https://github.com/myzsh/myzsh/wiki">{{ page.pagecontent.doc.wiki }}</a></p>
               </div>
             </div>
           </li>
